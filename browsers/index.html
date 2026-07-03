@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>/priv/ - Browsers</title>
+<link rel="stylesheet" href="../board.css">
+</head>
+<body>
+
+<div class="siteHead">
+  <div class="logoRow">
+    <h1><span class="slash">/</span>priv<span class="slash">/</span> <small>- Privacy &amp; Anonymity</small></h1>
+    <div class="tagline">"the internet never forgets, so stop feeding it"</div>
+  </div>
+</div>
+
+<div class="boardStrip">
+  [ <a href="../">Home</a> ]
+  [ <a href="../vpns/">VPNs</a> ]
+  [ <span class="cur">Browsers</span> ]
+  [ <a href="../operating-systems/">Operating Systems</a> ]
+  [ <a href="../countries/">Country Restrictions</a> ]
+</div>
+<div class="subStrip">
+  Thread: Browsers &nbsp;&bull;&nbsp; 6 posts &nbsp;&bull;&nbsp; last verified against sources Jul 2026
+</div>
+
+<div class="wrap">
+
+  <div class="banner">
+    <b>Read first:</b> Incognito / Private mode is not a privacy tool. It stops your browsing showing up in
+    <i>local</i> history, that's it. Websites, your ISP, and your employer's network still see everything.
+    Google settled a $5B lawsuit over exactly this misunderstanding. The browsers below actually change what
+    gets sent, not just what gets remembered.
+  </div>
+
+  <div class="pageTitle">
+    <h2>Browsers Thread</h2>
+    <div class="sub">ranked loosely by anonymity, not by "best browser overall." pick based on your actual threat model.</div>
+  </div>
+
+  <div class="opPost">
+    <div class="postInfo"><span class="name">Anonymous</span> <span class="num">No.2210014</span> Verified Jul 2026</div>
+    <span class="gt">&gt;the two things that matter here</span><br>
+    &gt; tracker/ad blocking - stops known trackers from loading at all<br>
+    &gt; fingerprint resistance - stops sites from identifying you by the unique shape of your device/browser
+    even with cookies and trackers fully blocked<br>
+    <span class="gt">&gt;independent test data (PrivacyTests.org, cited by PCMag)</span><br>
+    &gt; Brave scores 143/156 and Mullvad Browser 141/156 on automated tracking-protection tests, both ahead of
+    stock Firefox
+  </div>
+
+  <hr class="sep">
+
+  <!-- Tor Browser -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.2210028</span>
+      <span class="tag">MAX ANONYMITY</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Tor Browser</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">How:</span> routes traffic through three volunteer-run relays (onion routing), no single point knows both who you are and what you're visiting</li>
+        <li><span class="k">Standardization:</span> every Tor Browser install looks identical to a website, so you blend into the crowd instead of standing out as a unique fingerprint</li>
+        <li><span class="k">Trade-off:</span> noticeably slower, some sites block Tor exit nodes outright, and DRM/streaming content mostly won't work</li>
+        <li><span class="k">Best for:</span> journalists, sources, activists, anyone whose threat model includes "a government or well-resourced adversary might specifically look for me"</li>
+      </ul>
+      <p class="entryDesc">The actual gold standard for "can this specific browsing session be traced back to me."
+      Not a daily driver for most people, and that's fine, it's not trying to be one.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: factually.co, cybernews.com, meshworld.in - cross-checked</span>
+        <a class="btn gud" href="https://www.torproject.org" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mullvad Browser -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.2210035</span>
+      <span class="tag">TOR-LEVEL, FASTER</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Mullvad Browser</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">Built by:</span> a joint project between Mullvad and the Tor Project</li>
+        <li><span class="k">Base:</span> Firefox ESR, hardened against fingerprinting the same way Tor Browser is, but without routing through the Tor network itself</li>
+        <li><span class="k">Catch:</span> you supply your own network layer - it's fingerprint-resistant, it doesn't hide your IP by itself, pair it with a VPN (any VPN, doesn't have to be Mullvad's)</li>
+        <li><span class="k">Bonus:</span> includes uBlock Origin pre-installed, ships DAITA traffic-shaping to resist AI-based traffic analysis when used with Mullvad VPN</li>
+      </ul>
+      <p class="entryDesc">"Tor Browser without the network slowdown." If Tor feels like too much friction for
+      daily use but you still want serious fingerprint resistance, this is the middle path.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: tornews.com, ipdrop.io, meshworld.in - cross-checked</span>
+        <a class="btn gud" href="https://mullvad.net/browser" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LibreWolf -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.2210049</span>
+      <span class="tag">DAILY DRIVER</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>LibreWolf</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">What it is:</span> a hardened fork of Firefox, essentially "30 minutes of manually hardening Firefox" already done for you</li>
+        <li><span class="k">Out of the box:</span> zero telemetry, non-tracking default search engine, uBlock Origin pre-installed, strict tracking protection and fingerprint resistance already enabled</li>
+        <li><span class="k">Trade-off:</span> maintained by a smaller community team, security updates can lag official Firefox releases by a day or two</li>
+      </ul>
+      <p class="entryDesc">The pick if you're a Firefox person who doesn't want to spend an afternoon in
+      about:config. Everything Firefox does, minus the parts that phone home.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: cybernews.com (Feb 2026), ipdrop.io - cross-checked</span>
+        <a class="btn gud" href="https://librewolf.net" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brave -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.2210061</span>
+      <span class="tag">EASIEST SWITCH</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Brave</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">Base:</span> Chromium, so Chrome extensions and site compatibility just work</li>
+        <li><span class="k">Default blocking:</span> Shields blocks ads/trackers and resists fingerprinting out of the box, no setup needed</li>
+        <li><span class="k">Extra:</span> built-in private-tab-over-Tor mode for one-off anonymous browsing without a separate app</li>
+        <li><span class="k">Caveat:</span> comes from a company with a crypto/rewards angle (BAT) - ignorable if you don't opt in, but know it's there</li>
+      </ul>
+      <p class="entryDesc">If someone's coming from Chrome and wants the least painful upgrade, this is it.
+      Five minutes to switch, immediately less trackable, everything still renders correctly.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: cybernews.com, factually.co (2 independent write-ups) - cross-checked</span>
+        <a class="btn gud" href="https://brave.com" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firefox -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.2210077</span>
+      <span class="tag">CONFIGURABLE</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Firefox</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">Out of the box:</span> Enhanced Tracking Protection, Total Cookie Protection, DNS-over-HTTPS - decent, not exceptional, defaults</li>
+        <li><span class="k">Real strength:</span> independent, non-Chromium engine, deeply configurable via about:config if you're willing to tune it</li>
+        <li><span class="k">Reality check:</span> to actually reach LibreWolf-level privacy takes manual setup most people never do</li>
+      </ul>
+      <p class="entryDesc">Not private by default, but the only mainstream browser that isn't built on
+      Chromium, which matters if you care about the web not being a Google monoculture. Worth it if you're
+      willing to spend twenty minutes in the settings.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: simeononsecurity.com, ipdrop.io - cross-checked</span>
+        <a class="btn" href="https://www.mozilla.org/firefox" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <div class="opPost">
+    <div class="postInfo"><span class="name">Anonymous</span> <span class="num">No.2210090</span></div>
+    <span class="gt">&gt;the one everyone should stop using for privacy purposes</span><br>
+    &gt; Chrome - still holds roughly two-thirds of the browser market as of 2026. it ships ad-targeting infrastructure
+    (Topics API) baked in, ties browsing to your Google account, and Google's whole business model is advertising.
+    it is, by design, the worst privacy option on this list<br>
+    <span class="gt">&gt;independent privacy ranking most sources converge on</span><br>
+    &gt; Tor / Mullvad Browser &gt; LibreWolf &gt; Brave &gt; hardened Firefox &gt; stock Firefox &gt; Safari &gt; Edge &gt; Chrome
+  </div>
+
+</div>
+
+<div class="siteFoot">
+  /priv/ - a static reference board. no logs kept because there's no server-side anything to keep them in.<br>
+  Not affiliated with any browser vendor listed here.<br>
+  <div class="ubb">Layer a VPN under any of these - the browser controls what's sent, the VPN controls who sees it in transit.</div>
+</div>
+
+</body>
+</html>
