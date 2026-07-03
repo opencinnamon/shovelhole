@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>/priv/ - Operating Systems</title>
+<link rel="stylesheet" href="../board.css">
+</head>
+<body>
+
+<div class="siteHead">
+  <div class="logoRow">
+    <h1><span class="slash">/</span>priv<span class="slash">/</span> <small>- Privacy &amp; Anonymity</small></h1>
+    <div class="tagline">"the internet never forgets, so stop feeding it"</div>
+  </div>
+</div>
+
+<div class="boardStrip">
+  [ <a href="../">Home</a> ]
+  [ <a href="../vpns/">VPNs</a> ]
+  [ <a href="../browsers/">Browsers</a> ]
+  [ <span class="cur">Operating Systems</span> ]
+  [ <a href="../countries/">Country Restrictions</a> ]
+</div>
+<div class="subStrip">
+  Thread: Operating Systems &nbsp;&bull;&nbsp; 5 posts &nbsp;&bull;&nbsp; last verified against sources Jul 2026
+</div>
+
+<div class="wrap">
+
+  <div class="banner">
+    <b>Read first:</b> your OS sees everything your browser sees, plus your filesystem, every other running app,
+    your hardware identifiers, and whatever telemetry the vendor decided to bake in. A perfect VPN and browser
+    setup running on stock Windows still leaks through the OS layer. Pick by threat model, not by whichever
+    sounds the most hardcore.
+  </div>
+
+  <div class="pageTitle">
+    <h2>Operating Systems Thread</h2>
+    <div class="sub">three different philosophies: forget everything, isolate everything, or just don't phone home. know which one you actually need.</div>
+  </div>
+
+  <div class="opPost">
+    <div class="postInfo"><span class="name">Anonymous</span> <span class="num">No.3310012</span> Verified Jul 2026</div>
+    <span class="gt">&gt;pick by your actual situation, not vibes</span><br>
+    &gt; general privacy from corporate tracking &rarr; a hardened mainstream OS is probably enough<br>
+    &gt; activist / journalist / handles sensitive sources &rarr; specialized privacy OS, seriously consider it<br>
+    &gt; dissident / target of state-level surveillance &rarr; maximum-security OS, real operational security discipline required<br>
+    &gt; the heaviest, most locked-down system is the one you're most likely to abandon after a week. match the tool
+    to the actual risk, not the coolest option
+  </div>
+
+  <hr class="sep">
+
+  <!-- Tails -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.3310026</span>
+      <span class="tag">AMNESIC</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Tails <span class="juris">(The Amnesic Incognito Live System)</span></h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">How it runs:</span> boots entirely from a USB stick, leaves nothing on the host computer's internal drive when you shut down</li>
+        <li><span class="k">Network:</span> routes all traffic through Tor by default, resets its MAC address on every boot to confuse network-level logging</li>
+        <li><span class="k">Persistence:</span> optional encrypted partition if you want to keep select files between sessions - everything else still reverts to fresh on reboot</li>
+        <li><span class="k">Pre-installed:</span> Tor Browser, KeePassXC, OnionShare, Thunderbird - the essentials already configured to leak as little as possible</li>
+        <li><span class="k">Not for:</span> daily driving, heavy workloads, or a machine you actually own and trust - it's built for machines you don't</li>
+      </ul>
+      <p class="entryDesc">The right call for a single high-risk session on a computer that isn't yours - a library,
+      an internet café, a borrowed laptop. Not a replacement for your everyday OS.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: expressvpn.com, linuxlap.com (May 2026), stateofsurveillance.org - cross-checked</span>
+        <a class="btn gud" href="https://tails.net" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qubes OS -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.3310041</span>
+      <span class="tag">COMPARTMENTALIZED</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Qubes OS</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">Core idea:</span> every task runs in its own isolated virtual machine ("qube") - a compromise in one doesn't reach the rest of the system</li>
+        <li><span class="k">Built on:</span> the Xen hypervisor, so "work," "personal," and "sensitive" can be fully separated qubes that never touch each other</li>
+        <li><span class="k">Pairs with:</span> Whonix qubes for Tor-routed work directly inside the compartmentalized setup</li>
+        <li><span class="k">Trade-off:</span> resource-intensive (realistically wants 16GB RAM and an SSD), steep learning curve, not a casual weekend project</li>
+        <li><span class="k">Best for:</span> people who need to keep genuinely separate contexts from ever leaking into each other - lawyers, security researchers, journalists with multiple sources</li>
+      </ul>
+      <p class="entryDesc">Widely considered the most secure desktop OS that exists, and that reputation is
+      earned. The cost is real complexity - this is the "seriously consider it" option, not the default.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: expressvpn.com (May 2026), dasroot.net, linuxlap.com - cross-checked</span>
+        <a class="btn gud" href="https://www.qubes-os.org" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Whonix -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.3310058</span>
+      <span class="tag">DUAL-VM</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>Whonix</h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">Architecture:</span> two virtual machines - a Gateway that routes all traffic through Tor, and a Workstation where you actually work, fully isolated from each other</li>
+        <li><span class="k">Why it matters:</span> even if malware compromises the Workstation, it still can't discover your real IP, because the Workstation never talks to the network directly</li>
+        <li><span class="k">Vs. Tails:</span> persistent rather than amnesic - you can save work and maintain state, unlike Tails' fresh-every-boot model</li>
+        <li><span class="k">Runs on:</span> VirtualBox, KVM, or as qubes inside Qubes OS itself</li>
+      </ul>
+      <p class="entryDesc">The pick if you want Tor-level anonymity but also need a working environment that
+      doesn't reset itself every time you shut down. More setup than Tails, more persistence in return.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: expressvpn.com, stateofsurveillance.org, dasroot.net - cross-checked</span>
+        <a class="btn gud" href="https://www.whonix.org" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GrapheneOS -->
+  <div class="entry">
+    <div class="postInfo">
+      <span class="name">Anonymous</span> <span class="num">No.3310074</span>
+      <span class="tag">MOBILE</span>
+    </div>
+    <div class="entryBody">
+      <div class="entryTitleRow">
+        <h3>GrapheneOS <span class="juris">(mobile, Pixel devices)</span></h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <ul class="factList">
+        <li><span class="k">What it removes:</span> Google Play Services and telemetry stripped out entirely by default</li>
+        <li><span class="k">Hardening:</span> hardened memory allocator, strict app sandboxing, kernel-level mitigations beyond stock Android</li>
+        <li><span class="k">Hardware tie-in:</span> uses the Pixel's Titan security chip for Verified Boot with user-controlled keys - tamper resistance stock Android doesn't offer</li>
+        <li><span class="k">App compatibility:</span> can run Google Play apps in an optional sandbox if needed, without giving Play Services system-level access</li>
+        <li><span class="k">Limitation:</span> only supported on Pixel hardware - no Samsung, no iPhone equivalent</li>
+      </ul>
+      <p class="entryDesc">The de-facto standard for a genuinely hardened phone in 2026. If mobile privacy
+      matters to you, this is what security researchers and journalists' security teams actually recommend.</p>
+      <div class="entryFoot">
+        <span class="srcNote">Sources: factually.co, secureblitz.com (Mar 2026), digitalescapetools.com - cross-checked</span>
+        <a class="btn gud" href="https://grapheneos.org" target="_blank" rel="noopener noreferrer">View Website &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <div class="opPost">
+    <div class="postInfo"><span class="name">Anonymous</span> <span class="num">No.3310099</span></div>
+    <span class="gt">&gt;what about just hardened Windows/macOS?</span><br>
+    &gt; workable if you want everyday privacy from corporate tracking, not from a real adversary. Windows 11
+    collects telemetry that can't be fully disabled through settings alone. macOS ties activity to your Apple ID
+    by design<br>
+    &gt; if that's genuinely your whole threat model, a de-Googled Android via CalyxOS or a hardened Linux distro
+    like Fedora is a reasonable middle ground - not everyone needs Qubes<br>
+    <span class="gt">&gt;honest bottom line</span><br>
+    &gt; there is no single "most private OS." there's the one that matches what you're actually protecting
+    against and that you'll still be using in a month
+  </div>
+
+</div>
+
+<div class="siteFoot">
+  /priv/ - a static reference board. no logs kept because there's no server-side anything to keep them in.<br>
+  Not affiliated with any project listed here.<br>
+  <div class="ubb">Combine with disk encryption, a strong passphrase, and 2FA regardless of which OS you pick.</div>
+</div>
+
+</body>
+</html>
